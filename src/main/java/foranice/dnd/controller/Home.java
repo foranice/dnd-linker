@@ -16,6 +16,7 @@ public class Home {
     @RequestMapping("/index")
     public String Index(){
         this.redisTemplate.opsForValue().set("study", "java");
+        redisTemplate.opsForSet().add("","");
         return  "dnd linker service";
     }
 }
